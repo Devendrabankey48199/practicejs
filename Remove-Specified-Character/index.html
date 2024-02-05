@@ -10,10 +10,14 @@
 <body>
     <script src="index.js"></script>
     <div id="main">
+     
         <div id="container">
-            <input type="text" max="10" min="3" id="Input" required>
+            <label for="Input">Input a string minimum 4 letters maximum 15 letters</label>
+            <input type="text" max="15" min="4" id="Input" required>
+            <label for="Position">Input Character Position</label>
+            <input type="number" min="1" id="Position" required>
             <button>Enter</button>
-            <p></p>
+            <p id="p1"></p>
             
         </div>
     </div>
