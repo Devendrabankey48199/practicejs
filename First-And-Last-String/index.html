@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <style>
     * {
         margin: 0;
@@ -59,7 +60,12 @@
         cursor: pointer;
 
     }
+
+    label {
+        font-size: .8rem;
+    }
 </style>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         document.querySelector("button").addEventListener('click', () => {
@@ -68,13 +74,10 @@
 
             let value = input.value
 
-            if (value.startsWith("Py")) {
-                p.innerHTML = `${value}`
-            }
-            else {
+            if (value.startswith("JAVA")) {
 
-                p.innerHTML = `Py${value}`
             }
+
 
 
         })
@@ -86,7 +89,8 @@
     <script src="index.js"></script>
     <div id="main">
         <div id="container">
-            <input type="text" max="10" min="3" id="Input" required>
+            <label for="Input">Enter String to change the position of the first and last characters</label>
+            <input type="text" max="200" min="1" id="Input" required>
             <button>Enter</button>
             <p></p>
 

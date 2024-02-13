@@ -4,8 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
 </head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 100;
+    }
+
+    #main {
+        color: rgb(229, 229, 229);
+        width: 100%;
+        height: 100vh;
+        background-color: tomato;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        line-height: 50px;
+    }
+
+    #container {
+
+        padding: 10px;
+        width: 30%;
+        height: 25%;
+    }
+
+    input {
+        border-radius: 15px;
+        width: 60%;
+        color: tomato;
+        background-color: aliceblue;
+        border: none;
+        padding: 10px;
+
+    }
+
+    button {
+        border-radius: 15px;
+        width: 35%;
+        color: tomato;
+        background-color: aliceblue;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+
+    }
+
+    #p2 {
+        font-size: 3em;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", function () {
+
+
+            let input = document.getElementById("Input")
+            let p1 = document.getElementById("p1");
+            let num = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+            p1.innerHTML = `Random number is ${num} & Your number is ${input.value}`;
+            finalResult = (input.value == num) ? 'Good Work' : 'Not matched'
+            document.getElementById("p2").innerHTML = finalResult
+
+
+
+        });
+    });
+
+</script>
 
 <body>
     <script src="index.js"></script>
